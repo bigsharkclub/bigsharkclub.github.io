@@ -6,12 +6,10 @@ $articleTextColor = #424242
 article
   position relative
   padding 8rem 0
-  line-height 1.5
-
+  line-height 1.6
   a
     color #333
-    padding-bottom 2px
-    border-bottom 1px solid
+
   &:not(:first-child):before
     content ''
     width 150px
@@ -75,6 +73,10 @@ article
     margin 4rem 0
     font-size 1.6rem
     color $articleTextColor
+
+    a
+      padding-bottom 2px
+      border-bottom 1px solid
 
     img
       max-width: 100%
