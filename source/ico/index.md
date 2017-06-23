@@ -3,9 +3,9 @@ title: ICO 日历
 date: 2017-06-20 09:55:34
 ---
 
-## Confirmed Dates
+## 确认时间
 
-| Date  | Asset | One Liner | Blockchain | Website | Slack Invite Link | Reddit | Twitter |
+| Date  | Asset | One Liner | Blockchain | Website | Slack | Reddit | Twitter |
 | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
 | February 26 | PeerPlays | On-chain Gaming and Tournaments | Graphene-based | [Link](http://www.peerplays.com) | [Link](https://peerplays.chat) | [Link](https://www.reddit.com/r/Peerplays/) | [Link](https://twitter.com/peerplays) |
 | March 15  | Creativechain  | Multimedia marketplace for distributed intellectual property | (New) | [Link](https://www.creativechain.org) | | [Link](https://www.reddit.com/domain/creativechain.org/) |  |
@@ -32,7 +32,7 @@ date: 2017-06-20 09:55:34
 | July 1 | Tezos  | A New Digital Commonwealth | (New) | [Link](https://tezos.com/) | [Link](http://slack.tezos.com/) | |[Link](https://twitter.com/tez0s?lang=en)|
 | July 7 | Blocktix | Event hosting platform designed for the real world | Ethereum | [Link](https://blocktix.io/) | [Link](https://slack.blocktix.io/) | [Link](https://www.reddit.com/r/blocktix/) | [Link](https://twitter.com/blocktix) |
 
-## Unconfirmed Dates
+## 时间待定
 
 | Rough Start  | Asset | One Liner | Blockchain | Website | Slack Invite Link | Reddit | Twitter |
 | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
