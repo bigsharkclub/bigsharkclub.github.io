@@ -30,25 +30,28 @@ Margin交易者关闭仓位从市场中结算货物-->Lending交易者提供货�
 我们用一个简单的例子来说明**对冲的方式**：
 
 Mako目前手头上有100个eth，但是最近的价格已经有点高了，所以他决定使用Poloniex来对冲掉一部分风险。他的操作方式如下：在poloniex的marin account存入了50个eth，此时的exchange的计价为0.14(eth/btc)，margin account的保证金价值恰好相抵和btc计价无关，刚好能够做空50个eth。
-```
+
+$$
 BTC amount = 50(eth) \times 0.14(eth/btc)
 ETH amount = \frac{BTC amount}{0.14(eth/btc)} = \frac{50(eth) \times 0.14(eth/btc)}{0.14(eth/btc)} = 50(eth)
-```
+$$
 
 
 上述Mako的情况，会出现两种结果：
 1. eth兑换btc的单价下跌，假设价格下跌到0.13(eth/btc)。如果Mako没有对冲50个eth，则这次下跌会让mako持有的eth损失1个BTC的价值。而mako如果选择对冲掉50个eth，并选择0.13(eth/btc)进行结算，则这次做空的带来的风险控制收益为：
 
-```
+$$
 BTC benfit = ETHamount*(0.14(eth/btc)-0.13(eth/btc))-LendingInterst
-```
+$$
+
 即，这次对冲，Mako其中的50个eth给他带来了0.5btc减掉借贷利息的利润，而另外50个eth则因为没有对冲损失0.5btc。这次下跌给Mako带来的影响是：仅仅支付了利息，自己持有的eth还是接近原来0.14(eth/btc)的价值。随后，mako可以将套期保值所获得的约等于0.5个btc兑换成eth，这样，以btc计价的情况下，这次对冲Mako没有任何损失，即不用因为担心价格下跌而选择卖出eth，同时也能维持自己eth的持有价值在一定的价格水平位置。
 
 2.eth兑换btc的单价上涨，假设价格下跌到0.15(eth/btc).如果Mako没有对冲50个eth，则这次上涨会让Mako的eth增加多1个btc的价值。而如果Mako选择对冲掉50个eth，则这个价值则由1变成了0.5。表现在Margin中则是：
 
-```
+$$
 ETHlost = ETHamount-\frac{ETHamount*0.01(eth/btc))-LendingInterst}{0.14(eth/btc)}
-```
+$$
+
 即，这次对冲给Mako反而带来了“损失”，其持有的价值分别是50个0.14(eth/btc)和50个0.15(eth/btc)。我们再假设一个最坏的情况：隔日eth的价格疯狂的暴涨达到了0.28(eth/btc)。那么，mako的margin账户将会被清算，因为其空单已经让其margin的价值为0。我们寄希望于对冲能够给我们带来风险的控制，但是上涨迅猛反而让我们“损失”了。虽然不需要担心其中的价格波动，但是这着实是个需要仔细分析的问题。
 
 在极端的假设条件下，我们假设了一个极端走势可能给我们带来的风险，这里，我列举两个手段来规避这个问题：
