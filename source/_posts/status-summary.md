@@ -30,7 +30,7 @@ status 根据当前已经参投金额 计算出此次可以投的金额
 将总众筹金额 176, 595 ether分为四个ceil， 每个ceil包含3个参数：**limit** （ceil 参投目标金额）、**slopeFactor** (斜率)、 **collectMinimum** (最小金额) ， 如下图所示：
 
 ![curevs](http://i1.buimg.com/1949/b618de40030914d2.png)
-**maxCollected**列是我加的，这列是ceil内最大参透金额。
+**maxCollected**列是我加的，这列是ceil内最大参投金额。
 
 ![Markdown](http://i1.buimg.com/1949/adf9356632d1c1bb.png)
 
