@@ -1,5 +1,5 @@
 ---
-title: 黄金、发币、班科
+title: 黄金、法币、班科
 date: 2017-07-27 23:07:40
 category: 经济
 author: DRAGON
