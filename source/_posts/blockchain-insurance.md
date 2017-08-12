@@ -1,7 +1,7 @@
 ---
 title: 数据的潮流与区块链保险
 date: 2017-07-15 11:45:49
-category: 行业分析
+category: 保险
 author: 风卷草
 ---
 
