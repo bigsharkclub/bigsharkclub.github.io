@@ -54,8 +54,10 @@ https://etherscan.io/address/0x73dd069c299a5d691e9836243bcaec9c8c1d8734
 
 ### 加入矿池
 BTE 是通过烧 ETH 获得的代币，为了方便大家挖矿，目前有 BTE 鲨鱼矿池 1和2，上限都是 100人，直接转账到合约地址，自动挖矿，
-矿池1: https://etherscan.io/address/0x29aa20fb9b23421e310bdb8a7cfb81d7fbb4a1b3 
-矿池2: https://etherscan.io/address/0x4c13184721de2d1b47a8875775ba3ce0b2e00ee0 ， 记得不能普通转账，需要用高级模式 ，gas 150000，目前可以至少转 0.01 加入矿池，矿池有 5% 的提币手续费, 挖矿进度查询工具: http://pools.bigshark.club/。使用工具查询到余额后，再转账一笔 0.01 ether 获取挖矿奖励，gas 也是 15万。
+矿池1: https://etherscan.io/address/0x2918daf5b7c6cd43e3c9fce08b3bde11b09a15b5 
+矿池2: https://etherscan.io/address/0x6cd239a7717c1639214880e53f38f47c99d6cffc 
+
+记得不能普通转账，需要用高级模式 ，gas 150000，目前可以至少转 0.01 加入矿池，矿池有 5% 的提币手续费, 挖矿进度查询工具: [http://bigshark.club/explorer_web/](http://bigshark.club/explorer_web/)。使用工具查询到余额后，再转账一笔 0.01 ether 获取挖矿奖励，gas 也是 15万。
 
 ### 总结
 bitcoineum 的价值，通过公平挖矿方式产生一个有价值的 BTE 代币（比特币模式），这个有价值的 BTE 代币可以通过以太坊强大智能合约的方式，直接兑换成其他拓展功能的代币，比如现在以太坊支持零知识证明，可以写一个零知识证明隐私保护的代币合约，BTE 的持有者可以直接调用智能合约，获得直接有价值的和具有零知识证明的代币。bitcoineum 的创新之处在于更公平的挖矿（手机挖矿）和 价值转换的方式。更多关于 BTE 的细节，请阅读 BSC 翻译的白皮书: [http://bigshark.club/bitcoineum_white_paper_cn.pdf](http://bigshark.club/bitcoineum_white_paper_cn.pdf)
