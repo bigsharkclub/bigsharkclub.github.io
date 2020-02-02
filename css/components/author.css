@@ -1,0 +1,13 @@
+article .author-list-link {
+  font-size: 18px;
+}
+article .author-list-count {
+  font-size: 14px;
+  color: #555;
+}
+article .author-list-count:before {
+  content: ' (';
+}
+article .author-list-count:after {
+  content: ' 篇)';
+}
