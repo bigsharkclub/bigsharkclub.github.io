@@ -1,0 +1,854 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>BSC</title>
+
+  
+  <meta name="author" content="BSC">
+  
+
+  
+  <meta name="description" content="Your Title Here
+        
+            html {
+                color: #6196BC;
+                font-family: sans-serif;
+                font-size: 1.1em;">
+  
+
+  
+
+  <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+  
+
+  <meta property="og:site_name" content="BSC"/>
+
+  
+  <meta property="og:image" content="/favicon.ico"/>
+  
+
+  <link href="/favicon.ico" rel="icon">
+  <link rel="alternate" href="/atom.xml" title="BSC" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+</head>
+
+
+<body>
+<div class="blog">
+  <div class="content">
+
+    <header>
+  <div class="site-branding">
+    <h1 class="site-title">
+      <a href="/">BSC</a>
+    </h1>
+    <p class="site-description"></p>
+  </div>
+  <nav class="site-navigation">
+    <ul>
+      
+        <li><a href="/">列表</a></li>
+      
+        <li><a href="/categories">分类</a></li>
+      
+        <li><a href="/authors">作者</a></li>
+      
+        <li><a href="/ico">ICO</a></li>
+      
+    </ul>
+  </nav>
+</header>
+
+    <main class="site-main posts-loop">
+    <article>
+  
+    
+    <h3 class="article-title"><span></span></h3>
+    
+  
+
+  <div class="article-top-meta">
+    <span class="author">
+      <a href="/authors/">
+        
+      </a>
+    </span>
+    <span class="posted-on">
+      <a href="/sharkpools/index.html" rel="bookmark">
+        <time class="entry-date published" datetime="2017-08-12T04:54:14.000Z">
+          2017-08-12
+        </time>
+      </a>
+    </span>
+  </div>
+
+
+  
+
+  <div class="article-content">
+    <div class="entry">
+      
+        <!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Your Title Here</title>
+        <style type="text/css">
+            html {
+                color: #6196BC;
+                font-family: sans-serif;
+                font-size: 1.1em;
+                line-height: 2.6ex;
+                margin: 0;
+            }
+            body {
+                margin: 60px 0 70px;
+            }
+            h1 {
+                margin-bottom: 35px;
+            }
+            .clearfix {
+                clear: both;
+            }
+            .right {
+                text-align: right;
+            }
+            .no-wrap {
+                font-family: monospace;
+                word-break: break-all;
+            }
+            a {
+                border-bottom: 1px dashed #376589;
+                color: #376589;
+                text-decoration: none;
+            }
+            a:hover {
+                border-bottom: 1px dashed #74a4c7;
+                color: #74a4c7;
+            }
+            .centerer {
+                margin-left: 50%;
+            }
+            .centered {
+                margin-left: -400px;
+                width: 800px;
+            }
+            div.code {
+                border: 2px dashed #629dcb;
+                color: #376589;
+                font-family: monospace;
+                margin-bottom: 40px;
+                padding: 20px 30px;
+                white-space: pre;
+            }
+            div.hr {
+                border-top: 1px solid #376589;
+                height: 0px;
+                margin: 50px 0px;
+            }
+            #choose-name {
+                position: relative;
+                line-height: 40px;
+            }
+            #choose-name input {
+                border: none;
+                font-family: sans-serif;
+                font-size: 26px;
+                font-weight: bold;
+                margin: 0;
+                outline: none;
+                padding: 0;
+                position: absolute;
+                left: 0;
+                line-height: 40px;
+                top: 0;
+                width: 500px;
+            }
+            #mirror.empty {
+                font-style: italic;
+                font-weight: normal;
+                opacity: 0.5;
+            }
+            #choose-name input[type="text"] {
+                text-transform: lowercase;
+            }
+            #choose-name .mirror {
+                font-family: sans-serif;
+                font-size: 26px;
+                font-weight: bold;
+                line-height: 40px;
+                position: absolute;
+                pointer-events: none;
+                left: 0;
+                top: 0;
+            }
+            #mirror {
+                opacity: 0;
+                padding-right: 2px;
+            }
+            #status {
+                background-position: left;
+                float: right;
+                font-size: 16px;
+                font-weight: bold;
+                line-height: 40px;
+                padding-left: 40px;
+                background-repeat: no-repeat;
+                ddd-border: 1px solid blue;
+                min-width: 130px;
+                dddtext-align: center;
+            }
+            #status.ok {
+                background-image: url(./images/status-ok.png);
+            }
+            #status.bad {
+                background-image: url(./images/status-bad.png);
+            }
+            #status.pending {
+                background-image: url(./images/status-pending.gif);
+            }
+            #choose-amount {
+            }
+            #choose-amount input[type="range"] {
+                width: 500px;
+            }
+            #choose-amount span {
+                font-family: sans-serif;
+                font-size: 1.2em;
+                padding-left: 20px;
+                line-height: 50px;
+            }
+            /* START:http://danielstern.ca/range.css/#/ */
+            input[type=range] {
+                -webkit-appearance: none;
+                width: 100%;
+                margin: 8px 0;
+            }
+            input[type=range]:focus {
+                outline: none;
+            }
+            input[type=range]::-webkit-slider-runnable-track {
+                width: 100%;
+                height: 10px;
+                cursor: pointer;
+                background: rgba(98, 157, 203, 0.78);
+                border-radius: 5px;
+                border: 2px solid #376589;
+            }
+            input[type=range]::-webkit-slider-thumb {
+                border: 2px solid #376589;
+                height: 26px;
+                width: 26px;
+                border-radius: 15px;
+                background: #ffffff;
+                cursor: pointer;
+                -webkit-appearance: none;
+                margin-top: -10px;
+            }
+            input[type=range]:focus::-webkit-slider-runnable-track {
+                background: rgba(98, 157, 203, 0.78);
+            }
+            input[type=range]::-moz-range-track {
+                width: 100%;
+                height: 10px;
+                cursor: pointer;
+                background: rgba(98, 157, 203, 0.78);
+                border-radius: 5px;
+                border: 2px solid #376589;
+            }
+            input[type=range]::-moz-range-thumb {
+                border: 2px solid #376589;
+                height: 26px;
+                width: 26px;
+                border-radius: 15px;
+                background: #ffffff;
+                cursor: pointer;
+            }
+            input[type=range]::-ms-track {
+                width: 100%;
+                height: 10px;
+                cursor: pointer;
+                background: transparent;
+                border-color: transparent;
+                color: transparent;
+            }
+            input[type=range]::-ms-fill-lower {
+                background: rgba(98, 157, 203, 0.78);
+                border: 2px solid #376589;
+                border-radius: 10px;
+            }
+            input[type=range]::-ms-fill-upper {
+                background: rgba(98, 157, 203, 0.78);
+                border: 2px solid #376589;
+                border-radius: 10px;
+            }
+            input[type=range]::-ms-thumb {
+                border: 2px solid #376589;
+                height: 26px;
+                width: 26px;
+                border-radius: 15px;
+                background: #ffffff;
+                cursor: pointer;
+                height: 10px;
+            }
+            input[type=range]:focus::-ms-fill-lower {
+                background: rgba(98, 157, 203, 0.78);
+            }
+            input[type=range]:focus::-ms-fill-upper {
+                background: rgba(98, 157, 203, 0.78);
+            }
+            /* END:http://danielstern.ca/range.css/#/ */
+            .invalid {
+                color: #000;
+                display: none;
+                height: 100px;
+                line-height: 100px;
+                text-align: center;
+            }
+            #step-3 {
+                transition: opacity 0.1s linear;
+            }
+            #step-3.inactive {
+                opacity: 0.3;
+                pointer-events: none;
+            }
+            #step-3.inactive .option {
+                display: none;
+            }
+            #step-3.inactive .invalid {
+                display: block;
+            }
+            #step-4 {
+                transition: opacity 0.1s linear;
+            }
+            #step-4.inactive .info {
+                display: none;
+            }
+            #step-4.inactive {
+                opacity: 0.3;
+                pointer-events: none;
+            }
+            #step-4.inactive .invalid {
+                display: block;
+            }
+            div.table-heading {
+                font-weight: bold;
+                font-size: 1.2em;
+                margin-bottom: 25px;
+            }
+            th {
+                vertical-align: top;
+                padding-bottom: 14px;
+                padding-right: 20px;
+                text-align: left;
+                white-space: nowrap;
+            }
+            td {
+                vertical-align: top;
+            }
+            .tabs {
+                margin-bottom: 55px;
+            }
+            .tabs .tab {
+                border-bottom: 3px solid #376589;
+                cursor: pointer;
+                float: left;
+                font-weight: bold;
+                text-align: center;
+                margin-right: 40px;
+                opacity: 0.4;
+                padding-bottom: 10px;
+                transition: opacity 0.3s linear;
+                width: 200px;
+            }
+            .tabs div.tab.selected {
+               opacity: 1;
+            }
+            .tabs div.tab:hover {
+                opacity: 1;
+            }
+            .center {
+                text-align: center;
+            }
+            p {
+                margin-bottom: 50px;
+            }
+            .step {
+                margin-bottom: 30px;
+            }
+            .step .heading {
+                font-weight: bold;
+                height: 50px;
+                margin-bottom: 15px;
+            }
+            .step .heading span.bullet {
+                border: 2px solid #376589;
+                border-radius: 28px;
+                color: #376589;
+                display: inline-block;
+                font-size: 22px;
+                height: 50px;
+                line-height: 52px;
+                margin-right: 14px;
+                padding-left: 2px;
+                text-align: center;
+                width: 48px;
+                vertical-align: middle;
+            }
+            .step .heading span.title {
+                vertical-align: middle;
+                font-size: 30px;
+                line-height: 50px;
+            }
+            .step .info {
+                padding: 0 0 20px 76px;
+            }
+            .button {
+                border: 2px solid #376589;
+                border-radius: 6px;
+                cursor: pointer;
+                display: inline-block;
+                height: 64px;
+                padding: 16px;
+                width: 400px;
+            }
+            .button.no-click {
+                cursor: auto;
+            }
+            .button.disable {
+                opacity: 0.4;
+                pointer-events: none;
+            }
+            .logo {
+                display: inline-block;
+                float: left;
+                height: 64px;
+                width: 64px;
+            }
+            .metamask.logo {
+                background: url(/images/metamask.png);
+                background-size: contain;
+            }
+            .ethers.logo {
+                background: url(/images/ethers.png);
+                background-size: contain;
+            }
+            .button-info {
+                float: left;
+                font-weight: bold;
+                height: 60px;
+                padding: 2px 0;
+                text-align: center;
+                width: 334px;
+            }
+            .button-info.one-line {
+                line-height: 60px;
+            }
+            .button-info.two-line {
+                line-height: 30px;
+            }
+            .unit {
+                font-family: serif;
+                font-size: 0.95em;
+                dddfont-weight: bold;
+                padding-right: 1px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="centerer">
+            <div class="centered">
+                <div>
+                    <h1> 注册并参与众筹</h1>
+                    <p>
+                        此次众筹为建设 BTE 矿池，参与众筹的用户，可以获得矿池收益的分红。投入越多，分红越多。
+                    </p>
+
+                    <div class="hr"></div>
+
+                    <div class="step">
+                        <div class="heading"><span class="bullet">1</span> <span class="title">注册用户名</span></div>
+                        <div class="info">
+                            4 - 20 个字母组合
+                        </div>
+                        <div class="info">
+                            <div id="choose-name"><input placeholder="" spellcheck="false" type="text" value=""><span class="mirror"><span class="empty" id="mirror">username</span>.sharkpools.eth</span>&nbsp;<div id="status"></div></div>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="heading"><span class="bullet">2</span> <span class="title">参与金额</span></div>
+                        <div class="info">
+                            
+                            最少 0.1 ether
+                        </div>
+                        <div class="info">
+                            <div id="choose-amount"><input type="range" min="0.1" max="3.14" step="0.01" value="0.1"><span>&Xi; 0.1</span></div>
+                        </div>
+                    </div>
+
+                    <div id="step-3" class="step inactive">
+                        <div class="heading"><span class="bullet">3</span> <span class="title">选择钱包</span></div>
+                        <div class="info">
+                            <div class="tabs">
+                                <div class="clearfix"></div>
+                                <div class="tab selected" data-option="ethers">DApp Labs</div>
+                                <div class="tab" data-option="metamask">MetaMask</div>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="center option ethers">
+                                <div class="clearfix"></div>
+                                <div class="button ethers-account">
+                                    <div class="ethers logo"></div>
+                                    <div class="button-info two-line">No Account<br>Please create an account above</div>
+                                </div>
+                                <div id="button-ethers" class="button ethers-account ethers-required">
+                                    <div class="ethers logo"></div>
+                                    <div class="button-info two-line">Register with DApp Labs &mdash;<br><i><span class="populate-name"></span>.sharkpool.eth</i></div>
+                                 </div>
+                                 <div class="clearfix"></div>
+                            </div>
+                            <div class="center option metamask">
+                                <div class="clearfix"></div>
+                                <div class="button metamask metamask-install">
+                                    <div class="metamask logo"></div>
+                                    <div class="button-info two-line">MetaMask not installed.<br><a href="https://metamask.io" target="_blank">Download it</a>.</div>
+                                </div>
+                                <div class="button metamask no-click metamask-unlock">
+                                    <div class="metamask logo"></div>
+                                    <div class="button-info two-line">MetaMask is Locked &mdash;<br>Click MetaMask to Enable</div>
+                                </div>
+                                <div id="button-metamask" class="button metamask metamask-ready">
+                                    <div class="metamask logo"></div>
+                                    <div class="button-info two-line">Register with MetaMask &mdash;<br><i><span class="populate-name"></span>.sharkpool.eth</i></div>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                            </div>
+                            <div class="invalid">
+                                <div>请先注册用户名</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="step-4" class="step inactive">
+                        <div class="heading"><span class="bullet">4</span> <span class="title">确认交易</span></div>
+                        <div class="info">
+                            <table>
+                                <tr class="has-transaction"><th>Transaction Hash:</th><td><a class="populate-link-hash" target="_blank"></a></td></tr>
+                                <tr><th>Name Status:</th><td><a class="populate-link-name" target="_blank"></a></td></tr>
+                            </table>
+                        </div>
+                        <div class="invalid">
+                            <div>等待交易打包.</div>
+                        </div>
+                    </div>
+                </div>
+              
+            </div>
+        
+        <script type="text/javascript" src="https://cdn.ethers.io/scripts/ethers-app-v0.2.min.js"></script>
+        <script type="text/javascript">
+            if (window === window.parent) {
+                alert('请连接 web3 节点');
+            }
+            var ens = (function() {
+                var abi = [
+                    {"constant":true,"inputs":[{"name":"node","type":"bytes32"}],"name":"owner","outputs":[{"name":"addr","type":"address"}],"payable":false,"type":"function"},
+                ];
+                //var contractAddress = '0x112234455c3a32fd11230c42e7bccd4a84e02010';
+                var contractAddress = '0x314159265dd8dbb310642f98f50c066173c1259b';
+                return ethers.getContract(contractAddress, abi);
+            })();
+            var registrar = (function() {
+                var abi = [
+                    {"constant":true,"inputs":[],"name":"config","outputs":[{"name":"ens","type":"address"},{"name":"nodeHash","type":"bytes32"},{"name":"admin","type":"address"},{"name":"fee","type":"uint256"},{"name":"defaultResolver","type":"address"}],"payable":false,"type":"function"},
+                    {"constant":true,"inputs":[{"name":"nodeHash","type":"bytes32"}],"name":"donations","outputs":[{"name":"donation","type":"uint256"}],"payable":false,"type":"function"},
+                    {"constant":false,"inputs":[{"name":"nodeHash","type":"bytes32"}],"name":"donate","outputs":[],"payable":true,"type":"function"},
+                    {"constant":true,"inputs":[],"name":"stats","outputs":[{"name":"nameCount","type":"uint256"},{"name":"totalPaid","type":"uint256"},{"name":"balance","type":"uint256"}],"payable":false,"type":"function"},
+                    {"constant":true,"inputs":[],"name":"fee","outputs":[{"name":"fee","type":"uint256"}],"payable":false,"type":"function"},
+                    {"constant":false,"inputs":[{"name":"label","type":"string"}],"name":"register","outputs":[],"payable":true,"type":"function"}
+                ];
+                var contractAddress = '0x6fC21092DA55B392b045eD78F4732bff3C580e2c';
+                return ethers.getContract(contractAddress, abi);
+            })();
+            function forEach(selector, callback) {
+                Array.prototype.forEach.call(document.querySelectorAll(selector), callback);
+            }
+            function populate(key, value) {
+                forEach('.populate-' + key, function(el) { el.textContent = value; });
+                if (key === 'name') {
+                    forEach('.populate-link-' + key, function(el) {
+                        el.setAttribute('href', 'https://etherscan.io/enslookup?q=' + value + '.firefly.eth');
+                        el.textContent = value + '.firefly.eth';
+                    });
+                } else if (key === 'hash') {
+                    document.getElementById('step-4').classList.remove('inactive');
+                    forEach('.populate-link-' + key, function(el) {
+                        el.setAttribute('href', 'https://etherscan.io/tx/' + value);
+                        el.textContent = value;
+                    });
+                }
+            }
+            // Update the account address
+            function updateAccount(address) {
+                console.log(address);
+                var showingEthers = !!address;
+                forEach('.ethers-account', function(el) {
+                    var required = el.classList.contains('ethers-required');
+                    if (required === showingEthers) {
+                            el.style.display = '';
+                    } else {
+                            el.style.display = 'none';
+                    }
+                });
+            }
+            // Get the current account
+            ethers.getAccount().then(function(address){
+                updateAccount(address);
+            });
+            // Whenever the account changes...
+            ethers.onaccount = updateAccount;
+            (function() {
+                var chooseName = document.querySelector('#choose-name input');
+                var chooseAmount = document.querySelector('#choose-amount input');
+                var showAmount = document.querySelector('#choose-amount span');
+                var submit = document.querySelector('#submit');
+                var mirror = document.getElementById('mirror');
+                var status = document.getElementById('status');
+                // Step 3 - Select wallet
+                forEach('.tabs div.tab', function(el) {
+                    var option = el.getAttribute('data-option');
+                    function onclick() {
+                        // Deselect the current tab and select the new one
+                        forEach('.tabs div.tab.selected', function(el) {
+                            el.classList.remove('selected');
+                        });
+                        el.classList.add('selected');
+                        // Hide options and show selected option
+                        forEach('div.option', function(el) {
+                            if (el.classList.contains(option)) {
+                                el.style.display = '';
+                            } else {
+                                el.style.display = 'none';
+                            }
+                        });
+                        if (option === 'wallet') {
+                            forEach('.has-transaction', function(el) { el.style.display = 'none'; });
+                            document.getElementById('step-4').classList.remove('inactive');
+                        } else {
+                            forEach('.has-transaction', function(el) { el.style.display = ''; });
+                            document.getElementById('step-4').classList.add('inactive');
+                        }
+                    };
+                    el.onclick = onclick;
+                    // Select our initial tab
+                    if (option === 'ethers') { onclick(); }
+                });
+                // Poll for MetaMask state (installed? unlocked?) and update UI
+                var lastMetamaskButton = null;
+                function checkMetamask() {
+                    var metamaskButton = 'metamask-ready';
+                    var w = window.web3;
+                    // Metamask not installed
+                    if (!w  || !w.currentProvider || !w.currentProvider.isMetaMask) {
+                        metamaskButton = 'metamask-install';
+                    } else if (!w.eth || !w.eth.defaultAccount) {
+                        metamaskButton = 'metamask-unlock';
+                    }
+                    lastMetamaskButton = metamaskButton;
+                    forEach('.metamask.button', function(el) {
+                        console.log(el, el.classList.contains(metamaskButton), metamaskButton);
+                        if (el.classList.contains(metamaskButton)) {
+                                el.style.display = '';
+                        } else {
+                                el.style.display = 'none';
+                        }
+                    });
+                }
+                checkMetamask();
+                setInterval(checkMetamask, 1000);
+                var lastName = chooseName.value;;
+                chooseName.oninput = function() {
+                    var name = chooseName.value.toLowerCase();
+                    lastName = name;
+                    var step3 = document.getElementById('step-3');
+                    step3.classList.add('inactive');
+                    if (name.length) {
+                        mirror.classList.remove('empty');
+                        mirror.textContent = name;
+                    } else {
+                        mirror.classList.add('empty');
+                        mirror.textContent = 'your-name-here';
+                    }
+                    var reason = null;
+                    if (name.length === 0) {
+                        reason = ' ';
+                    } else if (name.length < 4) {
+                        reason = 'Too short!';
+                    } else if (name.length > 20) {
+                        reason = 'Too long!';
+                    } else if (!name.match(/^[a-z0-9-]*$/)) {
+                        reason = 'Invalid character!';
+                    }
+                    if (reason) {
+                        status.textContent = reason;
+                        status.classList.remove('pending');
+                        status.classList.remove('ok');
+                        if (reason !== ' ') {
+                            status.classList.add('bad');
+                        }
+                    } else {
+                        var value = ethers.parseEther(chooseAmount.value);
+                        var data = registrar.interface.functions.register(name).data;
+                        status.textContent = 'Checking...';
+                        status.classList.add('pending');
+                        status.classList.remove('ok');
+                        status.classList.remove('bad');
+                        // Lookup whether the name is available and update the status
+                        function updateStatus(name) {
+                            ens.owner(ethers.utils.namehash(name + '.firefly.eth')).then(function(result) {
+                                // The user has typed in a new address
+                                status.classList.remove('pending');
+                                if (name !== lastName) { return; }
+                                if (result.addr === '0x0000000000000000000000000000000000000000') {
+                                    status.textContent = 'Available!';
+                                    step3.classList.remove('inactive');
+                                    status.classList.add('ok');
+                                    status.classList.remove('bad');
+                                } else {
+                                    status.textContent = 'Already taken.';
+                                    status.classList.remove('ok');
+                                    status.classList.add('bad');
+                                }
+                            });
+                        }
+                        // Throttle calling the node for status updates
+                        (function(name) {
+                            setTimeout(function() {
+                                if (name !== lastName) { return; }
+                                updateStatus(name);
+                            }, 300);
+                        })(name);
+                        populate('name', name);
+                        populate('address', registrar.address);
+                        populate('gaslimit', '250000');
+                        populate('value', ethers.formatEther(value));
+                        populate('data', data);
+                    }
+                };
+                chooseAmount.oninput = function() {
+                    var value = ethers.parseEther(chooseAmount.value);
+                    var ether = ethers.formatEther(value);
+                    showAmount.textContent = ethers.etherSymbol + ' ' + ether;
+                    populate('value', ether);
+                };
+                //chooseName.focus();
+                document.getElementById('button-ethers').onclick = function() {
+                    var name = chooseName.value.toLowerCase();
+                    var value = ethers.parseEther(chooseAmount.value);
+                    var options = {
+                        gasPrice: 1100000000,
+                        gasLimit: 250000,
+                        value: value,
+                    };
+                    registrar.register(name, options).then(function(tx) {
+                        console.log(tx);
+                        document.getElementById('button-ethers').classList.add('disable');
+                        chooseName.readOnly = true;
+                        populate('hash', tx.hash);
+                    }, function(error) {
+                        console.log(error);
+                        alert(error.message);
+                    });
+                }
+                document.getElementById('button-metamask').onclick = function() {
+                    var name = chooseName.value.toLowerCase();
+                    var value = ethers.parseEther(chooseAmount.value);
+                    var data = registrar.interface.functions.register(name).data;
+                    var tx = {
+                        data: data,
+                        gasPrice: 1100000000,
+                        gasLimit: 250000,
+                        to: registrar.address,
+                        value: value.toHexString(),
+                    };
+                    console.log(tx);
+                    window.web3.eth.sendTransaction(tx, function(error, hash) {
+                        console.log(error, hash);
+                        document.getElementById('button-metamask').classList.add('disable');
+                        chooseName.readOnly = true;
+                        if (error) { alert(error.message); }
+                        populate('hash', hash);
+                    });
+                }
+            })();
+        </script>
+    </body>
+</html>
+      
+    </div>
+
+  </div>
+
+  <div class="article-footer">
+    <div class="article-meta pull-left">
+
+    
+
+    
+
+    </div>
+
+    
+  </div>
+</article>
+
+
+    </main>
+
+    <footer class="site-footer">
+  <p class="site-info">
+    Proudly powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and
+    Theme by <a href="https://github.com/CodeDaraW/Hacker" target="_blank">Hacker</a>
+    </br>
+    
+    &copy; 2017 BSC
+    
+  </p>
+</footer>
+    
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-101590357-1', 'auto');
+    ga('send', 'pageview');
+
+</script>
+
+  </div>
+</div>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
+</html>

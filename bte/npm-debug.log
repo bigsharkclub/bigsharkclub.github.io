@@ -1,0 +1,48 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/Users/thursday/.nvm/versions/node/v6.8.1/bin/node',
+1 verbose cli   '/Users/thursday/.nvm/versions/node/v6.8.1/bin/npm',
+1 verbose cli   'run',
+1 verbose cli   'build' ]
+2 info using npm@3.10.8
+3 info using node@v6.8.1
+4 verbose run-script [ 'prebuild', 'build', 'postbuild' ]
+5 info lifecycle bitcoineum-pool@~prebuild: bitcoineum-pool@
+6 silly lifecycle bitcoineum-pool@~prebuild: no script for prebuild, continuing
+7 info lifecycle bitcoineum-pool@~build: bitcoineum-pool@
+8 verbose lifecycle bitcoineum-pool@~build: unsafe-perm in lifecycle true
+9 verbose lifecycle bitcoineum-pool@~build: PATH: /Users/thursday/.nvm/versions/node/v6.8.1/lib/node_modules/npm/bin/node-gyp-bin:/Users/thursday/Desktop/shark-pool-web/node_modules/.bin:/Users/thursday/.rvm/gems/ruby-2.4.0/bin:/Users/thursday/.rvm/gems/ruby-2.4.0@global/bin:/Users/thursday/.rvm/rubies/ruby-2.4.0/bin:/Users/thursday/.pyenv/shims:/Users/thursday/.nvm/versions/node/v6.8.1/bin:/Users/thursday/.cargo/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/TeX/texbin:/Users/thursday/Library/Android/sdk/platform-tools:/Users/thursday/Library/Android/sdk/tools/bin:/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/bin:/Users/thursday/Library/Android/sdk/emulator:/Users/thursday/.rvm/bin:/usr/local/Cellar/openvpn/2.4.2_1/sbin/:/Users/thursday/go/bin:/usr/local/go/bin
+10 verbose lifecycle bitcoineum-pool@~build: CWD: /Users/thursday/Desktop/shark-pool-web
+11 silly lifecycle bitcoineum-pool@~build: Args: [ '-c', 'rimraf dist && webpack -p --progress --hide-modules' ]
+12 silly lifecycle bitcoineum-pool@~build: Returned: code: 2  signal: null
+13 info lifecycle bitcoineum-pool@~build: Failed to exec build script
+14 verbose stack Error: bitcoineum-pool@ build: `rimraf dist && webpack -p --progress --hide-modules`
+14 verbose stack Exit status 2
+14 verbose stack     at EventEmitter.<anonymous> (/Users/thursday/.nvm/versions/node/v6.8.1/lib/node_modules/npm/lib/utils/lifecycle.js:255:16)
+14 verbose stack     at emitTwo (events.js:106:13)
+14 verbose stack     at EventEmitter.emit (events.js:191:7)
+14 verbose stack     at ChildProcess.<anonymous> (/Users/thursday/.nvm/versions/node/v6.8.1/lib/node_modules/npm/lib/utils/spawn.js:40:14)
+14 verbose stack     at emitTwo (events.js:106:13)
+14 verbose stack     at ChildProcess.emit (events.js:191:7)
+14 verbose stack     at maybeClose (internal/child_process.js:877:16)
+14 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:226:5)
+15 verbose pkgid bitcoineum-pool@
+16 verbose cwd /Users/thursday/Desktop/shark-pool-web
+17 error Darwin 16.6.0
+18 error argv "/Users/thursday/.nvm/versions/node/v6.8.1/bin/node" "/Users/thursday/.nvm/versions/node/v6.8.1/bin/npm" "run" "build"
+19 error node v6.8.1
+20 error npm  v3.10.8
+21 error code ELIFECYCLE
+22 error bitcoineum-pool@ build: `rimraf dist && webpack -p --progress --hide-modules`
+22 error Exit status 2
+23 error Failed at the bitcoineum-pool@ build script 'rimraf dist && webpack -p --progress --hide-modules'.
+23 error Make sure you have the latest version of node.js and npm installed.
+23 error If you do, this is most likely a problem with the bitcoineum-pool package,
+23 error not with npm itself.
+23 error Tell the author that this fails on your system:
+23 error     rimraf dist && webpack -p --progress --hide-modules
+23 error You can get information on how to open an issue for this project with:
+23 error     npm bugs bitcoineum-pool
+23 error Or if that isn't available, you can get their info via:
+23 error     npm owner ls bitcoineum-pool
+23 error There is likely additional logging output above.
+24 verbose exit [ 1, true ]
