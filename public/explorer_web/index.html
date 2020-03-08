@@ -1,0 +1,255 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no,minimal-ui">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="full-screen" content="yes">
+    <meta name="x5-fullscreen" content="true">
+    <link rel="icon" href="../../favicon.ico">
+    <title>鲨鱼矿池查询</title>
+    <link href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/mycss.css" rel="stylesheet">
+    <script src="http://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bignumber.js/4.0.2/bignumber.min.js"></script>
+    <script type="text/javascript" src="js/web3.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="page-header text-center">
+            <h1>BTE矿池查询</h1>
+            <h5>鲨鱼矿池2.0 1号池 2号池</h5>
+        </div>
+        <div class="step-boxes">
+            <div class="input-group">
+                <input type="text" id="address" class="form-control" placeholder="输入你的钱包地址" value="">
+                <span class="input-group-btn">
+                <button class="btn btn-default disabled-btn
+" type="button" onclick="queryBte()"  value='disabled' ><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+                </span>
+            </div>
+            <div class="row fullWidth backg">
+                <div class="col-md-3 col-sm-3 col-xs-6">
+                    <div class="step-box">
+                        <div class="head">
+                            <h5>待领BTE</h5>
+                        </div>
+                        <ul class="list-unstyled">
+                            <li id="BTE">0</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-3 col-xs-6">
+                    <div class="step-box">
+                        <div class="head">
+                            <h5>投入ETH</h5>
+                        </div>
+                        <ul class="list-unstyled">
+                            <li id="InputETH">0</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-3 col-xs-6">
+                    <div class="step-box">
+                        <div class="head">
+                            <h5>剩余ETH</h5>
+                        </div>
+                        <ul class="list-unstyled">
+                            <li id="RemainETH">0</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-3 col-xs-6">
+                    <div class="step-box">
+                        <div class="head">
+                            <h5>BTE成本</h5>
+                        </div>
+                        <ul class="list-unstyled">
+                            <li id="cost">0</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row fullWidth">
+            <div class="panel panel-default">
+                <!-- Table -->
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>矿池编号</th>
+                            <th>剩余ETH</th>
+                            <th>数量占比</th>
+                            <th>剩余位置</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>读取中…</td>
+                            <td>读取中…</td>
+                            <td>读取中…</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>读取中…</td>
+                            <td>读取中…</td>
+                            <td>读取中…</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="row fullWidth">
+            <h4>其他链接</h4>
+            <div class="col-xs-5 col-md-2 col-sm-2 alert alert-success" role="alert"><a href="http://www.bitcoineum.com/">官网</a></div>
+            <div class="col-xs-5 col-md-2 col-sm-2 alert alert-success" role="alert"><a href="https://etherscan.io/token/0x73dd069c299a5d691e9836243bcaec9c8c1d8734#balances">持有人排行</a></div>
+            <div class="col-xs-5 col-md-2 col-sm-2 alert alert-success" role="alert"><a href="https://etherscan.io/address/0x2918daf5b7c6cd43e3c9fce08b3bde11b09a15b5">鲨鱼1号查看</a></div>
+            <div class="col-xs-5 col-md-2 col-sm-2 alert alert-success" role="alert"><a href="https://etherscan.io/address/0x6cd239a7717c1639214880e53f38f47c99d6cffc">鲨鱼2号查看</a></div>
+        </div>
+        <div class="row">
+            <p></p>
+        </div>
+        <div class="row fullWidth  text-center">
+            <p class="burning">载入中…</p>
+        </div>
+        <div class="row fullWidth  text-center">
+            <p>感谢: 大乌贼 ("\(●-●)/) Orange 高锋@ETHTE 与影同行</p>
+        </div>
+    </div>
+</body>
+<script>
+$(document).ready(function() {
+
+    var Web3 = require("web3");
+    var web3 = new Web3();
+    web3.setProvider(new Web3.providers.HttpProvider("https://web3.token.im"));
+    document.getElementById("address").value = getCookie("address");
+    var poolAddress0 = "0x2918daf5b7c6cd43e3c9fce08b3bde11b09a15b5";
+    var poolAddress1 = "0x6cd239a7717c1639214880e53f38f47c99d6cffc";
+    var abi = [{
+        "constant": true,
+        "inputs": [{
+            "name": "_owner",
+            "type": "address"
+        }],
+        "name": "balanceOf",
+        "outputs": [{
+            "name": "balance",
+            "type": "uint256"
+        }],
+        "payable": false,
+        "type": "function"
+    }, {
+        "constant": true,
+        "inputs": [{
+            "name": "_who",
+            "type": "address"
+        }],
+        "name": "find_contribution",
+        "outputs": [{
+            "name": "",
+            "type": "uint256"
+        }, {
+            "name": "",
+            "type": "uint256"
+        }, {
+            "name": "",
+            "type": "uint256"
+        }, {
+            "name": "",
+            "type": "uint256"
+        }],
+        "payable": false,
+        "type": "function"
+    }, {
+        "constant": true,
+        "inputs": [],
+        "name": "total_users",
+        "outputs": [{
+            "name": "",
+            "type": "uint256"
+        }],
+        "payable": false,
+        "type": "function"
+    }, {
+        "constant": true,
+        "inputs": [],
+        "name": "available_slots",
+        "outputs": [{
+            "name": "",
+            "type": "uint256"
+        }],
+        "payable": false,
+        "type": "function"
+    }];
+    //调用合约
+    var metacoin0 = web3.eth.contract(abi).at(poolAddress0);
+    var metacoin1 = web3.eth.contract(abi).at(poolAddress1);
+
+    //取矿池余额
+    var poolETH1 = toEth(web3.eth.getBalance(poolAddress0));
+    var poolETH2 = toEth(web3.eth.getBalance(poolAddress1));
+    var sumPoolETH = poolETH1 + poolETH2;
+
+    $(".burning").html("<p>自2017年7月19日至今已经燃烧了" + toEth(web3.eth.getBalance("0xdeaddeaddeaddeaddeaddeaddeaddeaddeaddead")) + "ETH</p>");
+    //ETH
+    $("table tr").eq(1).find("td").eq(0).html((poolETH1.toString()));
+    $("table tr").eq(2).find("td").eq(0).html((poolETH2.toString()));
+    //占比
+    $("table tr").eq(1).find("td").eq(1).html(((poolETH1 / sumPoolETH * 100).toFixed(2) + "%"));
+    $("table tr").eq(2).find("td").eq(1).html(((poolETH2 / sumPoolETH * 100).toFixed(2) + "%"));
+    //剩余位置
+    $("table tr").eq(1).find("td").eq(2).html((metacoin0.available_slots.call().toNumber()));
+    $("table tr").eq(2).find("td").eq(2).html((metacoin1.available_slots.call().toNumber()));
+
+    console.log("total:");
+    console.log(metacoin0.total_users.call().toNumber());
+    console.log(metacoin1.total_users.call().toNumber());
+
+    //单位转换
+    function toEth(Wei) {
+        return Math.round((Wei / 10000000000000000)) / 100;
+    }
+
+    //获取上次查询地址
+    function getCookie(cname) {
+        var name = cname + "=";
+        var ca = document.cookie.split(';');
+        for (var i = 0; i < ca.length; i++) {
+            var c = ca[i].trim();
+            if (c.indexOf(name) == 0) return c.substring(name.length, c.length);
+        }
+        return "";
+    }
+
+
+
+
+    //作用域
+    window.queryBte = function queryBte() {
+        //存储地址
+        var who = document.getElementById("address").value;
+        document.cookie = "address=" + who + "; expires=Fri, 31 Dec 9999 23:59:59 GMT";
+
+        //获取贡献
+        var bteInfo1 = metacoin0.find_contribution.call(who);
+        var bteInfo2 = metacoin1.find_contribution.call(who);
+
+        $("#BTE").html((metacoin0.balanceOf.call(who).toNumber() / 100000000).toFixed(2) + "  +  " + (metacoin1.balanceOf.call(who).toNumber() / 100000000).toFixed(2));
+        $("#InputETH").html(toEth(bteInfo1[2].toNumber() + bteInfo2[2].toNumber()));
+        $("#RemainETH").html(toEth(bteInfo1[3].toNumber() + bteInfo2[3].toNumber()));
+        var cost = ((toEth((bteInfo1[2].toNumber() + bteInfo2[2].toNumber()) - (bteInfo1[3].toNumber() + bteInfo2[3].toNumber()))) / ((metacoin0.balanceOf.call(who).toNumber() + metacoin1.balanceOf.call(who).toNumber()) / 100000000)).toFixed(4)
+        $("#cost").html(cost);
+    }
+});
+</script>
+
+</html>

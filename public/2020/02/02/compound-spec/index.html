@@ -1,0 +1,168 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>链上银行 Compound 介绍 | BSC</title>
+
+  
+  <meta name="author" content="BSC">
+  
+
+  
+  <meta name="description" content="Compound  在今年5月份发布了新的 v2 版本，支持 ETH、ZRX、REP、BAT、DAI、USDC 借贷市场。每个借贷市场都有自己的 cToken（cETH，cZRX ……），当用户将代币存入的 Compound 协议时，用户将获得该代币的 cToken，cTokens 表示你在 Com">
+  
+
+  
+  
+  <meta name="keywords" content="生态系统">
+  
+
+  <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+  <meta property="og:title" content="链上银行 Compound 介绍"/>
+
+  <meta property="og:site_name" content="BSC"/>
+
+  
+  <meta property="og:image" content="/favicon.ico"/>
+  
+
+  <link href="/favicon.ico" rel="icon">
+  <link rel="alternate" href="/atom.xml" title="BSC" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+</head>
+
+
+<body>
+<div class="blog">
+  <div class="content">
+
+    <header>
+  <div class="site-branding">
+    <h1 class="site-title">
+      <a href="/">BSC</a>
+    </h1>
+    <p class="site-description"></p>
+  </div>
+  <nav class="site-navigation">
+    <ul>
+      
+        <li><a href="/">列表</a></li>
+      
+        <li><a href="/categories">分类</a></li>
+      
+        <li><a href="/authors">作者</a></li>
+      
+        <li><a href="/ico">ICO</a></li>
+      
+    </ul>
+  </nav>
+</header>
+
+    <main class="site-main posts-loop">
+    <article>
+  
+    
+    <h3 class="article-title"><span>链上银行 Compound 介绍</span></h3>
+    
+  
+
+  <div class="article-top-meta">
+    <span class="author">
+      <a href="/authors/">
+        
+      </a>
+    </span>
+    <span class="posted-on">
+      <a href="/2020/02/02/compound-spec/" rel="bookmark">
+        <time class="entry-date published" datetime="2020-02-02T11:00:25.000Z">
+          2020-02-02
+        </time>
+      </a>
+    </span>
+  </div>
+
+
+  
+
+  <div class="article-content">
+    <div class="entry">
+      
+        <p>Compound  在今年5月份发布了新的 v2 版本，支持 ETH、ZRX、REP、BAT、DAI、USDC 借贷市场。每个借贷市场都有自己的 cToken（cETH，cZRX ……），当用户将代币存入的 Compound 协议时，用户将获得该代币的 cToken，cTokens 表示你在 Compound 中的资金余额。可以在 imToken 钱包查看 cToken 余额，也可以发送到硬件钱包（imKey ）安全保管，甚至可以对它们进行编程。</p>
+<p>只需持有 cToken，就可以赚取利息，用户的利息通过 cToken 的汇率累积 ， 随着时间的推移，每个 cToken 都可以转换为越来越多的相应存款代币。</p>
+<h2 id="Compound-协议如何运行的？"><a href="#Compound-协议如何运行的？" class="headerlink" title="Compound 协议如何运行的？"></a>Compound 协议如何运行的？</h2><p>Compound 协议是基于以太坊建立的借贷市场，提供资产的流动性池子，每个借贷市场都是基于供求关系自动平衡利率。存款人和借款人直接与 Comoound 协议交互，赚取或支付浮动利率，无需与对手方协商诸如贷款到期日、利率或抵押品等协议条款。</p>
+<p>Comoound 没有固定的存款和借款到期时间 ，利息会累积到每个以太坊区块，所以每个以太坊区块，用户都可以随时可以撤回资金或者偿还贷款。数字货币长期持有者可以使用 Compound 作为其投资额外回报的来源。 例如，拥有 DAI 的用户可以将其代币提供给 Compound 协议，并获得利息。</p>
+<h2 id="Compound-利率是如何计算的？"><a href="#Compound-利率是如何计算的？" class="headerlink" title="Compound 利率是如何计算的？"></a>Compound 利率是如何计算的？</h2><p>每个货币市场利率会根据市场供求关系自动平衡，当流动性充裕时，利率会低。随着流动性变得稀缺，利率上升，激励新的存款和偿还借款。</p>
+<p>每个货币市场利用率 U (Utilization) 与供需计算公式：<br>利用率 U = 借款金额 / (现金 + 借款金额 )</p>
+<p>借款利率计算公式：<br>借款年利率 (Borrow APR)= 2.5％+ U * 20％</p>
+<p>存款利率计算公式：<br>存款年利率(Supply APR)  =  借款利率 * U </p>
+<h2 id="为什么存款利率低于借款利率？"><a href="#为什么存款利率低于借款利率？" class="headerlink" title="为什么存款利率低于借款利率？"></a>为什么存款利率低于借款利率？</h2><p>在每个市场中都存在流动性过剩（资产存款&gt;借入的资产），这使用户可以快速从协议中提取或借入资金。<br>借款人支付的利息由存款人赚取。因为有更多的存款人，他们赚取的利率相应较低，是因为资产的流动性效应，第二，借款人支付的利息的一部分被留作储备金，这提供了流动性缓冲，保障清算过程中的用户资产安全。</p>
+<h2 id="用户如何借入资产？"><a href="#用户如何借入资产？" class="headerlink" title="用户如何借入资产？"></a>用户如何借入资产？</h2><p>Compound 协议依赖抵押品来确定你可以借入多少 ，Compound 将协议中的存款余额代币化为 cToken ，cToken 可以被转账或由开发人员编程以创建新的应用。随着货币市场累积利息，cToken 可以转换为越来越多的标的资产。借款是即时的，借款资金从协议直接转移到你的钱包。</p>
+<p>用户在每个货币市场资金的余额用 cToken 余额; 用户通过铸造 cToken 向市场提供资产，或通过 cToken 赎回标的资产。</p>
+<h2 id="cToken-交易汇率模型"><a href="#cToken-交易汇率模型" class="headerlink" title="cToken 交易汇率模型"></a>cToken 交易汇率模型</h2><p>cTokens 与存款代币之间的汇率随着时间的增加而增加，资产因为的借款人产生了利息，cToken 交易汇率计算公式：<br>cToken 交易汇率 = （标的资金 + 借款资金 - 储备 ）/ cToken 供应量</p>
+<h2 id="抵押品如何运作？"><a href="#抵押品如何运作？" class="headerlink" title="抵押品如何运作？"></a>抵押品如何运作？</h2><p>每个借贷市场都有一个抵押品因数（Collateral  Factor），范围从0到1，表示可借入资产价值的百分比。 流动性差的代币，抵押品因数较低，因为他们没有提供良好的抵押品，而流动性的代币，则有较高的抵押品因数。 </p>
+<p>用户借贷能力 = 抵押货币价值 * 抵押品因数</p>
+<p>当然，用户可以借出的金额不能不超过其借款能力。</p>
+<h2 id="抵押品清算如何运作？"><a href="#抵押品清算如何运作？" class="headerlink" title="抵押品清算如何运作？"></a>抵押品清算如何运作？</h2><p>如果用户未偿还借款的价值超过其借款能力，则可以用当前市场价格减去清算折扣的方式偿还部分未偿还借款以换取用户的 cToken 抵押品。这种激励措施使套利者迅速介入，以减少借款人的风险，并消除协议的风险。</p>
+<p>如果用户的帐户在清算（因为抵押资产的价值下降，或资产你借增加的价格），社区的成员可以偿还高达50%你的优秀借来的资产。</p>
+<p>清算用户会收到相应数量的抵押品5.0% discount，作为奖励。</p>
+<h2 id="Compound-安全吗？"><a href="#Compound-安全吗？" class="headerlink" title="Compound 安全吗？"></a>Compound 安全吗？</h2><p>首先 Compound 协议所有合约代码和用户余额都是可公开验证的，Compound也通过了第三方的安全审计，安全人员也可以发现并报告 Compound 漏洞可以获得漏洞奖励 。</p>
+<h2 id="谁控制-Compound-协议？"><a href="#谁控制-Compound-协议？" class="headerlink" title="谁控制 Compound 协议？"></a>谁控制 Compound 协议？</h2><p>Compound 协议开发公司 Compound Labs 目前控制着以太网地址0x8b8592e9570e96166336603a1b4bd1e8db20fa20，即协议管理员。<br>管理员地址有权支持其他资产，升级价格来源的 Oracle，升级利率模型，以及升级协议的风险模型。Compound 的目标是让协议管理可以完全去中心化，未来协议管理员将被 DAO 取代，由社区治理。</p>
+
+      
+    </div>
+
+  </div>
+
+  <div class="article-footer">
+    <div class="article-meta pull-left">
+
+    
+
+    
+    
+
+    <span class="post-tags">
+      <i class="icon-tags"></i>
+        <a href="/tags/生态系统/">生态系统</a>
+    </span>
+    
+
+    </div>
+
+    
+  </div>
+</article>
+
+
+    </main>
+
+    <footer class="site-footer">
+  <p class="site-info">
+    Proudly powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and
+    Theme by <a href="https://github.com/CodeDaraW/Hacker" target="_blank">Hacker</a>
+    </br>
+    
+    &copy; 2020 BSC
+    
+  </p>
+</footer>
+    
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-101590357-1', 'auto');
+    ga('send', 'pageview');
+
+</script>
+
+  </div>
+</div>
+</body>
+</html>

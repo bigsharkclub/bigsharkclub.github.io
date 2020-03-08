@@ -1,0 +1,185 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>分层确定性钱包 HD  Wallet 介绍 | BSC</title>
+
+  
+  <meta name="author" content="BSC">
+  
+
+  
+  <meta name="description" content="钱包是用于发送和接受代币的客户端，就像我们使用邮箱来管理自己的邮件，我们需要一个客户端来管理自己的代币。钱包的本质是保管私钥的工具，私钥就是一串很长的数字和字母组合的字符串，这个字符串让你有权力把自己的数字货币送给别人，换句话说，无论谁知道你的私钥，都可以控制你的数字货币。私钥也用于生成你的代币地址">
+  
+
+  
+  
+  <meta name="keywords" content="">
+  
+
+  <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+  <meta property="og:title" content="分层确定性钱包 HD  Wallet 介绍"/>
+
+  <meta property="og:site_name" content="BSC"/>
+
+  
+  <meta property="og:image" content="/favicon.ico"/>
+  
+
+  <link href="/favicon.ico" rel="icon">
+  <link rel="alternate" href="/atom.xml" title="BSC" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+</head>
+
+
+<body>
+<div class="blog">
+  <div class="content">
+
+    <header>
+  <div class="site-branding">
+    <h1 class="site-title">
+      <a href="/">BSC</a>
+    </h1>
+    <p class="site-description"></p>
+  </div>
+  <nav class="site-navigation">
+    <ul>
+      
+        <li><a href="/">列表</a></li>
+      
+        <li><a href="/categories">分类</a></li>
+      
+        <li><a href="/authors">作者</a></li>
+      
+        <li><a href="/ico">ICO</a></li>
+      
+    </ul>
+  </nav>
+</header>
+
+    <main class="site-main posts-loop">
+    <article>
+  
+    
+    <h3 class="article-title"><span>分层确定性钱包 HD  Wallet 介绍</span></h3>
+    
+  
+
+  <div class="article-top-meta">
+    <span class="author">
+      <a href="/authors/MakoShan">
+        MakoShan
+      </a>
+    </span>
+    <span class="posted-on">
+      <a href="/2017/10/20/intr-hd-wallet/" rel="bookmark">
+        <time class="entry-date published" datetime="2017-10-20T05:06:51.000Z">
+          2017-10-20
+        </time>
+      </a>
+    </span>
+  </div>
+
+
+  
+
+  <div class="article-content">
+    <div class="entry">
+      
+        <p>钱包是用于发送和接受代币的客户端，就像我们使用邮箱来管理自己的邮件，我们需要一个客户端来管理自己的代币。钱包的本质是保管私钥的工具，私钥就是一串很长的数字和字母组合的字符串，这个字符串让你有权力把自己的数字货币送给别人，换句话说，无论谁知道你的私钥，都可以控制你的数字货币。私钥也用于生成你的代币地址 - 这就像邮箱地址，只有知道地址才能给别人发送代币。然而，尽管代币地址是通过私钥生成的，但是没有办法通过检查数字货币地址来确定私钥是什么。总而言之，钱包的核心功能是私钥的创建、存储和使用。</p>
+<h1 id="钱包的类型"><a href="#钱包的类型" class="headerlink" title="钱包的类型"></a>钱包的类型</h1><p>私钥不同的生成方法，也对应着不同的钱包结构，通常可以分为非确定性钱包和确定性钱包。比特币最早的客户端（Satoshi client）就是非确定性钱包，钱包是一堆随机生成的私钥的集合。 客户端会预先生成 100 个随机私钥，并且每个私钥只使用一次。每个交易使用一个地址的概念是中本聪提出的。如果交易比较频繁，私钥可能会用光，然后再产生一批私钥，所以每次完成 100 个交易后，你必须备份新的  wallet.dat  文件，否则可能会丢失资产。这种钱包难以管理和备份。如果你生成很多私钥，你必须保存它们所有的副本。这就意味着这个钱包必须被经常性地备份。每个私钥都必须备份，否则一旦钱包不可访问时，无法找回钱包。</p>
+<p>确定性钱包则不需要每次转账都要备份，确定性钱包的私钥是对种子进行单向哈希运算生成的，种子是一串由随机数生成器生成的随机数。在确定性钱包中，只要有这个种子，就可以找回所有私钥，只需备份种子就相当于备份您的所有钱包，所以这个种子也相当重要，一定要备份到安全的地方。</p>
+<h1 id="什么是-HD-钱包"><a href="#什么是-HD-钱包" class="headerlink" title="什么是 HD 钱包"></a>什么是 HD 钱包</h1><p>HD 钱包是目前常用的确定性钱包 ，说到 HD 钱包，大家可能第一反应会想到硬件钱包 （Hardware wallet），其实这里的 HD 是 Hierarchical Deterministic（分层确定性）的缩写。所谓分层，就是一个大公司可以为每个子部门分别生成不同的私钥，子部门还可以再管理子子部门的私钥，每个部门可以看到所有子部门里的币，也可以花这里面的币。也可以只给会计人员某个层级的公钥，让他可以看见这个部门及子部门的收支记录，但不能花里面的钱，使得财务管理更方便了。</p>
+<p>分层确定性的概念早在比特币改进提案 <a href="https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki" target="_blank" rel="external">BIP32</a>提出。根据比特币核心开发者  <a href="https://github.com/tombusby/cypherpunk-research/blob/master/people/gregory_maxwell.md" target="_blank" rel="external"> Gregory Maxwell</a> 的<a href="https://bitcointalk.org/index.php?topic=19137.msg239768#msg239768" target="_blank" rel="external">原始描述和讨论</a>，Pieter Wuille 在2012 年 02月 11日整理完善提交 BIP32 。直到 2016年 6月 15 日 才被合并到进入 Bitcoin Core，目前几乎所有的钱包服务供应商都整合了该协议。BIP 32是 HD 钱包的核心提案，通过种子来生成主私钥，然后派生海量的子私钥和地址，但是种子是一串很长的随机数，不利于记录，所以我们用算法将种子转化为一串助记词 （Mnemonic），方便保存记录，这就是 BIP 39，它扩展了 HD 钱包种子的生成算法。BIP43 对 BIP32 树结构增加了子索引标识 purpose 的扩展  <code>m/purpose&#39;/ *</code>。 <a href="https://github.com/bitcoin/bips/blob/master/bip-0044.mediawiki" target="_blank" rel="external">BIP44 </a>是在 BIP43 和 BIP32 的基础上增加多币种，通过 HD 钱包派生多个地址，可以同时管理主网和测试网的比特币，BIP44 提出了 5 层的路径建议，如下：<br><code>m/purpse’/coin_type’/account’/change/address_index</code>，<br>BIP44 的规则使得 HD 钱包非常强大，用户只需要保存一个种子，就能控制所有币种，所有账户的钱包。</p>
+<h1 id="比特币-HD-钱包是如何生成的？"><a href="#比特币-HD-钱包是如何生成的？" class="headerlink" title="比特币 HD 钱包是如何生成的？"></a>比特币 HD 钱包是如何生成的？</h1><p><img src="https://whale-token-im.b0.upaiyun.com/cms-production/images/image-1508467383928.png" alt="file"></p>
+<ol>
+<li>生成一个助记词（参见 BIP39）</li>
+<li>该助记词使用 PBKDF2 转化为种子（参见 BIP39）</li>
+<li>种子用于使用 HMAC-SHA512 生成根私钥（参见BIP32）</li>
+<li>从该根私钥，导出子私钥（参见BIP32），其中节点布局由BIP44设置</li>
+</ol>
+<p>可以看出 BIP 39 生成助记词的过程非常重要， 大家肯定关心 BIP39 的安全性，如果一个 HD 钱包助记词是 12 个单词，一共有 2048 个单词可能性，如何算出随机的生成的助记词可能性是一个排列问题，根据公式： <code>n!/( n - r )!</code> ，既 <code>2048!/(2048-12)! = 5.2715379713014884760003093175282e+39</code>。<br>我们可以举个类比，地球上的沙子数量在大约是1 后面 18 个零。如果你可以每秒生成 一百万个助记词，那么一年可以生成  <code>1000000*60*60*24*365=3.1536e+13</code>，大约需要  <code>1.6715937e+26</code> 年遍历所有助记词，这是多少年呢？</p>
+<h1 id="以太坊目前解决方案"><a href="#以太坊目前解决方案" class="headerlink" title="以太坊目前解决方案"></a>以太坊目前解决方案</h1><p>以太坊在 <a href="https://github.com/ethereum/EIPs/issues/84" target="_blank" rel="external">EIP84</a> 讨论，是否遵循 BIP32 和 BIP44，社区里提出来很多有意思的观点，比特币是基于 UTXO 的，所以可以使用 HD 钱包（BIP32）为每个交易分配一个新地址，以保护您的隐私。然而，以太坊是基于帐户的系统，每个帐户都有一个地址，BIP 是比特币的提案，而且比特币的数据结构的设计是围绕改变地址的想法构建的，BIP 的一些提案可能并不适合以太坊。以太坊的模式和比特币UTXO 不同，以太坊转账不能改变地址，如果在以太坊上实现 UTXO ，用户还必须签名两个交易以将余额的一部分发送到一个地址，将余额的一部分发送到第二个地址 - 这将使成本增加一倍，而且第二个交易可能不会在同一个区块中，当然以太坊也可以通过智能合约的方式实现。另外，以太坊目前官方钱包采用 <a href="[https://github.com/ethereum/wiki/wiki/Web3-Secret-Storage-Definition">KDF</a> 的形式，也就是我们常说的 Keystore 的形式。</p>
+<p>在 <a href="https://github.com/ethereum/EIPs/issues/85" target="_blank" rel="external">EIP85</a>  的讨论以太坊社区似乎默认也采用了 BIP32 的做法，先来说一说 BIP32 的优点：</p>
+<ol>
+<li>使用时间长，已经接受社区审查</li>
+<li>已经有多个编程语言的实现</li>
+<li>多个硬件钱包正在使用</li>
+<li>可以一个钱包，同时支持比特币和以太坊</li>
+</ol>
+<p>EIP85  提议 HD 路径为 : <code>m/44&#39;/60&#39;/a&#39;/0/n</code></p>
+<p>这里 的 a 表示帐号，n 是第 n 生成的地址，60 是在 <a href="https://github.com/satoshilabs/slips/blob/master/slip-0044.md" target="_blank" rel="external">SLIP44</a> 提案中暂定的，因为 BIP44 只定义到 0 - 31。</p>
+<p>目前已知以太坊客户端的具体实现：</p>
+<ul>
+<li><code>m/44&#39;/60&#39;/0&#39;/0/x</code>:  BIP44，MetaMask，Jaxx，MyEtherWallet，TREZOR，Exodus，imToken</li>
+<li><code>m/44&#39;/60&#39;/x&#39;/0/0</code>：BIP44，KeepKey，MetaMask</li>
+<li><code>m/44&#39;/60&#39;/0&#39;/x</code>：Electrum，Ledger Chrome App，</li>
+<li><code>m/44&#39;/coin_type&#39;/account&#39;/0</code>：Coinomi</li>
+</ul>
+<h1 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h1><p>使用单个地址钱包，你的所有交易都将与单个地址相关联，由于区块链所有的交易记录都是公开的，所以任何人都可以看到看到每个地址的所有交易记录以及账户余额。HD 钱包通过在发送和接收资金时能够生成新地址，大大提高隐私性，使你的交易难以追踪。当然匿名性是相对的，现在我们也有隐私性更好的零知识证明算法。HD 钱包是生成不重复使用地址的方法 ，记住一个种子就可以访问所有地址的钱而不需要每个地址都备份私钥。当然HD 钱包不仅适用于比特币，HD 钱包可以让一个钱包同时管理多资产成为可能性。</p>
+<p> 参考：</p>
+<ul>
+<li><a href="http://zhibimo.com/books/wang-miao/mastering-bitcoin" target="_blank" rel="external">http://zhibimo.com/books/wang-miao/mastering-bitcoin</a></li>
+<li><a href="http://www.8btc.com/hd-wallets" target="_blank" rel="external">http://www.8btc.com/hd-wallets</a></li>
+<li><a href="http://www.8btc.com/how-to-use-hd-wallets" target="_blank" rel="external">http://www.8btc.com/how-to-use-hd-wallets</a></li>
+</ul>
+
+      
+    </div>
+
+  </div>
+
+  <div class="article-footer">
+    <div class="article-meta pull-left">
+
+    
+      
+
+    <span class="post-categories">
+      <i class="icon-categories"></i>
+        <a href="/categories/区块链/">区块链</a>
+    </span>
+    
+
+    
+
+    </div>
+
+    
+  </div>
+</article>
+
+
+    </main>
+
+    <footer class="site-footer">
+  <p class="site-info">
+    Proudly powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and
+    Theme by <a href="https://github.com/CodeDaraW/Hacker" target="_blank">Hacker</a>
+    </br>
+    
+    &copy; 2020 BSC
+    
+  </p>
+</footer>
+    
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-101590357-1', 'auto');
+    ga('send', 'pageview');
+
+</script>
+
+  </div>
+</div>
+</body>
+</html>
